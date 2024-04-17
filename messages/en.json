@@ -10,6 +10,7 @@
     },
     "services": {
       "name": "services",
+      "url":"/en/services",
       "exams": {
         "name": "exams",
         "url": "/en/services/exams"
@@ -18,6 +19,34 @@
         "name": "x-rays",
         "url": "/en/services/x-ray"
       }
+    }
+  }
+},
+"footer":{
+  "companyName":"Veterinaria",
+  "menu": {
+    "home": {
+      "name": "home",
+      "url": "/en/"
+    },
+    "contact": {
+      "name": "contact",
+      "url": "/en/contact"
+    },
+    "services": {
+      "name": "services",
+      "url":"/en/services"
+    }
+  },
+  "legal":{
+    "copyright":"All rights reserved.",
+    "terms":{
+      "name":"terms",
+      "url":"/en/terms"
+    },
+    "conditions":{
+      "name":"conditions",
+      "url":"/en/conditions"
     }
   }
 }

@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
 const NotFoundPage = () => {
-  return redirect("/");
+  return redirect("/es");
 };
 
 export default NotFoundPage;

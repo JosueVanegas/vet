@@ -3,25 +3,53 @@
 "nav":{
   "home":{
     "name":"inicio",
-    "url":"/en/"
+    "url":"/es/"
   },
   "contact":{
     "name":"contactar",
-    "url":"/en/contact"
+    "url":"/es/contact"
   },
   "services":{
-    "name":"servicios",
+    "name":"servicios",  
+    "url":"/en/services",
     "exams":{
       "name":"examenes",
-      "url":"/en/services/exams"
+      "url":"/es/services/exams"
     },
     "x-ray":{
       "name":"radiografias",
-      "url":"/en/services/x-ray"
+      "url":"/es/services/x-ray"
     }
   }
-}
+}},
+"footer":{
+  "companyName":"Veterinaria",
+  "menu": {
+    "home": {
+      "name": "inicio",
+      "url": "/es/"
+    },
+    "contact": {
+      "name": "contactar",
+      "url": "/es/contact"
+    },
+    "services": {
+      "name": "servicios",
+      "url":"/es/services"
+    }
   },
+  "legal":{
+    "copyright":"Todos los derechos reservados",
+    "terms":{
+      "name":"terminos",
+      "url":"/es/terms"
+    },
+    "conditions":{
+      "name":"condiciones",
+      "url":"/es/conditions"
+    }
+  }
+},
     "index":{
         "welcome":{
             "title":"Veterinaria",

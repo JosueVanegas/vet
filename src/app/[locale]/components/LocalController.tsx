@@ -20,8 +20,8 @@ const LocalController = () => {
       />
       <select
         className="appearance-none w-20 text-primary outline-none bg-transparent pl-10 pr-2 py-1 rounded border border-primary hover:border-secondary transition-colors duration-200"
-        defaultValue="es"
         name="local"
+        defaultValue="es"
         onChange={handleChange}
       >
         <option
