@@ -1,0 +1,70 @@
+{
+  "header":{
+"nav":{
+  "home":{
+    "name":"inicio",
+    "url":"/en/"
+  },
+  "contact":{
+    "name":"contactar",
+    "url":"/en/contact"
+  },
+  "services":{
+    "name":"servicios",
+    "exams":{
+      "name":"examenes",
+      "url":"/en/services/exams"
+    },
+    "x-ray":{
+      "name":"radiografias",
+      "url":"/en/services/x-ray"
+    }
+  }
+}
+  },
+    "index":{
+        "welcome":{
+            "title":"Veterinaria",
+            "description":"lo que tu mascota merece y a tu bolcillo le apetece"
+
+        },
+        "services":{
+            "title":"nuestros servicios",
+            
+            "button":"ver más"
+        },
+        "contact":{
+            "title":"Contactanos",
+            "description":"descubre mas blablablablorem odio estamos en español?",
+            "button":"contactar"
+        }
+    },
+    "services":{
+        "1":{
+          "title": "Examenes",
+          "image":
+            "https://images.pexels.com/photos/5486965/pexels-photo-5486965.jpeg?auto=compress&cs=tinysrgb&w=1400",
+          "url": "/xd1"
+        },
+        "2":
+        {
+          "title": "Radiografias",
+          "image":
+            "https://images.pexels.com/photos/5487070/pexels-photo-5487070.jpeg?auto=compress&cs=tinysrgb&w=1400",
+          "url": "/xd2"
+        },
+      
+       "3": {
+        "title": "Hospitalisación",
+        "image":
+          "https://images.pexels.com/photos/1350591/pexels-photo-1350591.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "url": "xd3"
+      },
+       "4": {
+        "title": "Emergencia",
+        "image":
+          "https://images.pexels.com/photos/6235233/pexels-photo-6235233.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "url": "xd4"
+      }
+    }
+}

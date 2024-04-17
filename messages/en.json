@@ -1,0 +1,71 @@
+{"header": {
+  "nav": {
+    "home": {
+      "name": "home",
+      "url": "/en/"
+    },
+    "contact": {
+      "name": "contact",
+      "url": "/en/contact"
+    },
+    "services": {
+      "name": "services",
+      "exams": {
+        "name": "exams",
+        "url": "/en/services/exams"
+      },
+      "x-ray": {
+        "name": "x-rays",
+        "url": "/en/services/x-ray"
+      }
+    }
+  }
+}
+
+    ,
+    "index":{
+        "welcome":{
+            "title":"Veterinary",
+            "description":"what your pet deserves and your pocket likes"
+
+        },
+        "services":{
+            "title":"our services",
+            
+            "button":"see more"
+        },
+        "contact":{
+            "title":"Contact us",
+            "description":"discover more blablablablorem odio are we in Spanish?",
+            "button":"contact"
+        }
+    },
+    "services":{
+        "1":{
+          "title": "exams",
+          "image":
+            "https://images.pexels.com/photos/5486965/pexels-photo-5486965.jpeg?auto=compress&cs=tinysrgb&w=1400",
+          "url": "/xd1"
+        },
+        "2":
+        {
+          "title": "x-rays",
+          "image":
+            "https://images.pexels.com/photos/5487070/pexels-photo-5487070.jpeg?auto=compress&cs=tinysrgb&w=1400",
+          "url": "/xd2"
+        },
+      
+       "3": {
+        "title": "Hospitalization",
+        "image":
+          "https://images.pexels.com/photos/1350591/pexels-photo-1350591.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "url": "xd3"
+      },
+       "4": {
+        "title": "Emergency",
+        "image":
+          "https://images.pexels.com/photos/6235233/pexels-photo-6235233.jpeg?auto=compress&cs=tinysrgb&w=1400",
+        "url": "xd4"
+      }
+    }
+}
