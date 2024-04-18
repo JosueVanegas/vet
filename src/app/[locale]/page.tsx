@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useMessages, useTranslations } from "next-intl";
-import TranslatedCarrousel from "./components/TranslatedCarrousel";
+import TranslatedCarrousel from "../../components/TranslatedCarrousel";
 export default function Home() {
   const t = useTranslations("index");
   return (

@@ -9,6 +9,8 @@ todo:
 - [x] make internalization on the navbar
 - [x] the same to the footer
 - [x] contact form
-- [] create auth (UI/UX and backend)
-- [] create admin panel
-- [] connect the public contact form to backend
+- [ ] create auth (UI/UX and backend)
+- [x] create admin panel
+- [x] connect the public contact form to backend
+- [ ] create the visit system and auth is requered
+- [ ] finish services UI

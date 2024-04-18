@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  username String  @unique
+  password String
+  name     String
+  admin    Boolean @default(false)
+  visits   Visit[]
+}
+
+model Visit {
+  id              Int      @id @default(autoincrement())
+  reason          String
+  observations    String?  @default("")
+  status          Boolean  @default(false)
+  color           String   @default("#27907F")
+  date            DateTime @default(now())
+  clientDni       String   @default("")
+  clientName      String
+  clientPhone     String
+  clientAddress   String   @default("")
+  petName         String
+  petSpecies      String
+  petBreed        String   @default("")
+  appointmentDate DateTime
+  attendedBy      Int
+  user            User     @relation(fields: [attendedBy], references: [id])
+  createdAt       DateTime @default(now())
+}
+
+model Appointment {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String
+  reason    String
+  createdAt DateTime @default(now())
+}
