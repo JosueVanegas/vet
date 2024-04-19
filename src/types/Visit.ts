@@ -1,10 +1,10 @@
 import User from "./User";
 
 type Visit = {
-  id?: number;
+  id: number;
   reason: string;
-  observations?: string;
-  status: Boolean;
+  observations: string;
+  status?: boolean;
   color: string;
   clientDni?: string;
   clientName: string;
@@ -13,9 +13,8 @@ type Visit = {
   petName: string;
   petSpecies: string;
   petBreed?: string;
-  appointmentDate?: Date;
+  appointmentDate: Date;
   attendedBy: number;
-  user?: User;
   createdAt?: Date;
 };
 

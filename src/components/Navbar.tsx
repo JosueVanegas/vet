@@ -18,8 +18,8 @@ const Navbar = ({ locale }) => {
         <Link href="/">
           <img
             className="w-20 h-20 bg-cover transition-transform hover:rotate-180"
-            src="favicon.svg"
-            alt=""
+            src="/favicon.svg"
+            alt="veterinary"
           />
         </Link>
       </div>
@@ -42,7 +42,7 @@ const Navbar = ({ locale }) => {
           onClick={handleClose}
           className="fixed cursor-pointer top-10 right-10 z-50"
         >
-          <img src="icons/close.svg" alt="" />
+          <img src="/icons/close.svg" alt="" />
         </div>
         <nav>
           <ul className="flex flex-col items-start text-xl text-white gap-2">
@@ -83,17 +83,11 @@ const Navbar = ({ locale }) => {
 
           <li className="relative border-b-4 hover:border-primary group cursor-pointer ">
             {locale.services.name}
-            <ul className="mt-1 p-2 absolute group-hover:flex hidden  flex-col items-end  right-0  border border-white">
-              <li className="text-start w-max">
-                <Link href="">radiografias</Link>
-              </li>
-
-              <li className="text-start">
-                <Link href="">examenes</Link>
-              </li>
-
-              <li className="text-start">
-                <Link href="">operaciones</Link>
+            <ul className="mt-1 p-2 absolute group-hover:flex hidden  flex-col items-end  right-0 bg-white  border border-white">
+              <li className="text-start hover:text-primary">
+                <Link href={locale.services.exams.url}>
+                  {locale.services.exams.name}
+                </Link>
               </li>
             </ul>
           </li>

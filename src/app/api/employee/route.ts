@@ -3,7 +3,7 @@ import { NextApiRequest } from "next";
 
 export const GET = async () => {
   try {
-    const data = await db.appointment.findMany({
+    const data = await db.employee.findMany({
       orderBy: [
         {
           createdAt: "desc",
@@ -26,20 +26,29 @@ export const GET = async () => {
 
 export const POST = async (request) => {
   try {
-    const body: Appointment = await request.json();
+    const body: Employee = await request.json();
     if (!body)
       return new Response(JSON.stringify({ message: "bad request" }), {
         status: 400,
       });
-    const newAppointment = await db.appointment.create({
+    const exists = await db.employee.findUnique({
+      where: {
+        dni: body.dni,
+      },
+    });
+    if (exists)
+      return new Response(
+        JSON.stringify({ message: "cedula de identida ya registrada" })
+      );
+    const newemployee = await db.employee.create({
       data: {
         name: body.name,
-        reason: body.reason,
         email: body.email,
+        dni: body.dni,
         phone: body.phone,
       },
     });
-    if (!newAppointment)
+    if (!newemployee)
       return new Response(JSON.stringify({ message: "creation failed" }), {
         status: 400,
       });
@@ -48,35 +57,7 @@ export const POST = async (request) => {
       JSON.stringify({
         message: "data submit",
       }),
-      { status: 200 }
-    );
-  } catch (error) {
-    return new Response(
-      JSON.stringify({
-        message: "server error",
-        description: error,
-      }),
-      {
-        status: 500,
-      }
-    );
-  }
-};
-export const PATCH = async (request) => {
-  try {
-    const body: Appointment = await request.json();
-    const ap = await db.appointment.update({
-      data: {
-        status: !body.status,
-      },
-      where: {
-        id: body.id,
-      },
-    });
-    return new Response(
-      JSON.stringify({
-        message: "data update",
-      })
+      { status: 201 }
     );
   } catch (error) {
     return new Response(

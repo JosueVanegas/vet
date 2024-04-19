@@ -8,12 +8,11 @@ datasource db {
 }
 
 model User {
-  id       Int     @id @default(autoincrement())
-  username String  @unique
-  password String
-  name     String
-  admin    Boolean @default(false)
-  visits   Visit[]
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  password  String
+  admin     Boolean  @default(false)
+  createdAt DateTime @default(now())
 }
 
 model Visit {
@@ -22,7 +21,6 @@ model Visit {
   observations    String?  @default("")
   status          Boolean  @default(false)
   color           String   @default("#27907F")
-  date            DateTime @default(now())
   clientDni       String   @default("")
   clientName      String
   clientPhone     String
@@ -32,8 +30,18 @@ model Visit {
   petBreed        String   @default("")
   appointmentDate DateTime
   attendedBy      Int
-  user            User     @relation(fields: [attendedBy], references: [id])
+  employee        Employee @relation(fields: [attendedBy], references: [id])
   createdAt       DateTime @default(now())
+}
+
+model Employee {
+  id        Int      @id @default(autoincrement())
+  dni       String   @unique
+  name      String
+  email     String
+  phone     String
+  createdAt DateTime @default(now())
+  visits    Visit[]
 }
 
 model Appointment {
@@ -42,5 +50,6 @@ model Appointment {
   email     String
   phone     String
   reason    String
+  status    Boolean  @default(false)
   createdAt DateTime @default(now())
 }

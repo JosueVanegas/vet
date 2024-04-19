@@ -5,28 +5,32 @@ import React from "react";
 
 const menu = [
   {
-    name: "Admin",
+    name: "inicio",
     url: "/admin",
-  },
-  {
-    name: "consultas",
-    url: "/admin/appointment",
   },
   {
     name: "citas",
     url: "/admin/visit",
   },
   {
-    name: "Usuarios",
+    name: "consultas",
+    url: "/admin/appointment",
+  },
+
+  {
+    name: "empleados",
+    url: "/admin/employee",
+  },
+  {
+    name: "usuarios",
     url: "/admin/user",
   },
 ];
 
 const Navbar = () => {
   return (
-    <header className="flex w-full mx-10 justify-around">
-      <div>administración</div>
-      <nav className="flex items-center justify-center text-center">
+    <header className="sticky top-0  bg-white flex w-full items-center justify-center">
+      <nav className="flex items-center justify-center flex-wrap w-full text-center">
         {menu.map((item, index) => (
           <NavItem key={index} url={item.url}>
             {item.name}

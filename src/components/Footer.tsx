@@ -11,6 +11,9 @@ const Footer = () => {
             <a href={t("menu.home.url")}>{t("menu.home.name")}</a>
             <a href={t("menu.contact.url")}>{t("menu.contact.name")}</a>
             <a href={t("menu.services.url")}>{t("menu.services.name")}</a>
+            <a className="text-xl font-bold animate-pulse" href="/admin">
+              admin
+            </a>
           </ul>
         </div>
         <div> facebook | instagram | youtube</div>

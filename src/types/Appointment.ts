@@ -4,5 +4,6 @@ type Appointment = {
   email: string;
   phone: string;
   reason: string;
+  status?: Boolean;
   createdAt?: Date;
 };
