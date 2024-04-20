@@ -10,7 +10,8 @@ todo:
 - [x] the same to the footer
 - [x] contact form
 - [x] create admin panel
-- [ ] create auth (UI/UX and backend)
+- [x] create auth (UI/UX and backend)
 - [x] connect the public contact form to backend
-- [ ] create the visit system and auth is requered
-- [ ] finish services UI
+- [x] create the visit system and auth is requered
+- [x] finish services UI
+- [] create crud for the visit entity

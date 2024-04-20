@@ -1,4 +1,5 @@
 "use client";
+import InfoCard from "@/components/admin/InforCard";
 import { logout } from "@/libs/Session";
 import { useRouter } from "next/navigation";
 
@@ -43,23 +44,6 @@ const DashboardPage = () => {
         information="en esta zona se agregan a las personas que tendran acceso al sistema administrativo se recomienda ser cuidadoso a quien se le dara acceso"
       ></InfoCard>
     </section>
-  );
-};
-
-export const InfoCard = ({
-  title,
-  information,
-}: {
-  title: string;
-  information: string;
-}) => {
-  return (
-    <div className="mt-5 group overflow-hidden cursor-pointer">
-      <h3 className="font-bold text-xl border-l-4 border-primary pl-2">
-        {title}
-      </h3>
-      <p className="pl-5">{information}</p>
-    </div>
   );
 };
 
