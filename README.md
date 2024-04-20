@@ -14,4 +14,5 @@ todo:
 - [x] connect the public contact form to backend
 - [x] create the visit system and auth is requered
 - [x] finish services UI
-- [] create crud for the visit entity
+- [ ] create crud for the visit entity
+- [ ] solve problem with user endpoint

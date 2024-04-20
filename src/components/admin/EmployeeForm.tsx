@@ -143,7 +143,7 @@ const EmployeeForm = ({ id }: { id?: string }) => {
         <input
           className="px-10 cursor-pointer py-2 my-5 w-full text-white bg-primary"
           type="submit"
-          value="registrar"
+          value={id ? "guardar" : "registrar"}
         />
       </form>
     </section>

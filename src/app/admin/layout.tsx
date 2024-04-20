@@ -32,13 +32,13 @@ export default function MainLayout({
         <body>
           <Navbar></Navbar>
           <ReturnButton></ReturnButton>
-          <main className="flex min-h-screen flex-col items-center justify-between ">
+          <main className="flex overflow-hidden min-h-screen flex-col items-center justify-between ">
             {children}
           </main>
         </body>
       ) : (
         <body className="flex min-h-full items-center justify-center text-3xl">
-          <h1>acceso denegado inicia sesion, redirigiendo...</h1>
+          <h1>validando al usuario, redirigiendo...</h1>
         </body>
       )}
     </html>

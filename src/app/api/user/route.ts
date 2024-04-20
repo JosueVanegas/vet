@@ -2,7 +2,13 @@ import db from "@/database/db";
 
 export const GET = async () => {
   try {
-    const data = await db.user.findMany();
+    const data = await db.user.findMany({
+      orderBy: [
+        {
+          createdAt: "asc",
+        },
+      ],
+    });
     return new Response(JSON.stringify(data), { status: 200 });
   } catch (error) {
     return new Response(

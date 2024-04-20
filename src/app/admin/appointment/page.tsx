@@ -73,7 +73,7 @@ const AppointmentPage = () => {
       </div>
       <div className="flex justify-center items-center gap-1">
         <select
-          className="border border-primary rounded-xl py-2 px-2 text-secundary text-lg"
+          className="border border-primary rounded py-2 px-2 text-secundary text-lg"
           name="filterType"
           onChange={(e: ChangeEvent<HTMLSelectElement>) => {
             setFilterType(e.target.value);
@@ -88,7 +88,7 @@ const AppointmentPage = () => {
           <option value="reason">consulta</option>
         </select>
         <input
-          className="px-2 py-2 outline-none  border  rounded-xl border-primary"
+          className="px-2 py-2 outline-none  border  rounded border-primary"
           type="search"
           name="search"
           onChange={filterBy}
@@ -100,7 +100,11 @@ const AppointmentPage = () => {
           Array.isArray(filter) &&
           filter.map((item, index) => (
             <div
-              className="flex flex-col items-start relative text-primary border border-primary   shadow-2xl rounded-xl   w-60 h-[330px]"
+              className={`flex flex-col items-start relative  border ${
+                item.status
+                  ? "border-primary text-primary"
+                  : "text-red-600 border-red-600"
+              }   shadow-2xl rounded-xl   w-60 h-[330px]`}
               key={index}
             >
               <div className="mt-10 px-2 ">

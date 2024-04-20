@@ -29,7 +29,7 @@ const menu = [
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0  bg-white flex w-full items-center justify-center">
+    <header className="sticky top-0 z-20 bg-white flex w-full items-center justify-center">
       <nav className="flex items-center justify-center flex-wrap w-full text-center">
         {menu.map((item, index) => (
           <NavItem key={index} url={item.url}>

@@ -1,7 +1,5 @@
-import User from "./User";
-
 type Visit = {
-  id: number;
+  id?: number;
   reason: string;
   observations: string;
   status?: boolean;
@@ -14,8 +12,9 @@ type Visit = {
   petSpecies: string;
   petBreed?: string;
   appointmentDate: Date;
-  attendedBy: number;
+  attendedBy: string;
   createdAt?: Date;
+  employee?: Employee;
 };
 
 export default Visit;

@@ -1,5 +1,11 @@
+import VisitDashboard from "@/components/admin/VisitDashboard";
+
 const VisitPage = () => {
-  return <section>pagina de visitas</section>;
+  return (
+    <section>
+      <VisitDashboard></VisitDashboard>
+    </section>
+  );
 };
 
 export default VisitPage;

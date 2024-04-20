@@ -1,9 +1,10 @@
 "use client";
 
 import Visit from "@/types/Visit";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { UseFormRegister, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 const VisitForm = ({ id }: { id?: string }) => {
   const router = useRouter();
@@ -21,6 +22,18 @@ const VisitForm = ({ id }: { id?: string }) => {
         if (id) {
           const res = await fetch(`/api/visit/${parseInt(id)}`);
           const data: Visit = await res.json();
+          setValue("attendedBy", data.attendedBy);
+          setValue("clientName", data.clientName);
+          setValue("clientDni", data.clientDni);
+          setValue("clientAddress", data.clientAddress);
+          setValue("clientPhone", data.clientPhone);
+          setValue("petName", data.petName);
+          setValue("petBreed", data.petBreed);
+          setValue("petSpecies", data.petSpecies);
+          setValue("appointmentDate", data.appointmentDate);
+          setValue("color", data.color);
+          setValue("reason", data.reason);
+          setValue("observations", data.observations);
         }
       } catch (error) {
         console.log(error);
@@ -39,8 +52,7 @@ const VisitForm = ({ id }: { id?: string }) => {
   }, []);
   const onSubmit = async (body: Visit) => {
     try {
-      console.log(body);
-      /*const method = id ? "PATCH" : "POST";
+      const method = id ? "PATCH" : "POST";
       const api = id ? `/api/visit/${id}` : "/api/visit";
       const res = await fetch(api, {
         method: method,
@@ -53,27 +65,10 @@ const VisitForm = ({ id }: { id?: string }) => {
       setError(data.message);
       if (res.status === 201 || res.status === 200) {
         return router.push("/admin/visit");
-      }*/
+      }
     } catch (error) {
       console.log(error);
     }
-    /*
-    id?: number;
-    reason: string;
-    observations?: string;
-    status: Boolean;
-    color: string;
-    clientDni?: string;
-    clientName: string;
-    clientPhone: string;
-    clientAddress?: string;
-    petName: string;
-    petSpecies: string;
-    petBreed?: string;
-    appointmentDate?: Date;
-    attendedBy: number;
-    user?: User;
-    createdAt?: Date;*/
   };
   return (
     <section className=" flex   justify-center  w-full7 h-full min-h-[400px] ">
@@ -104,18 +99,23 @@ const VisitForm = ({ id }: { id?: string }) => {
                   </option>
                 ))}
             </select>
+            {errors.attendedBy && (
+              <p className="text-red-600 text-[12px] h-5">
+                {errors.attendedBy.message}
+              </p>
+            )}
           </div>
           <div className="flex flex-col w-full">
             <label htmlFor="appointmentDate">Agendada para: </label>
             <input
-              className="py-2 border-2 pr-20 pl-2 border-primary "
+              className="py-2 border-2  pl-2 border-primary "
               {...register("appointmentDate", {
                 required: {
                   message: "campo obligatorio",
                   value: false,
                 },
               })}
-              type="datetime-local"
+              type="date"
               name="appointmentDate"
               id=""
             />
@@ -215,9 +215,9 @@ const VisitForm = ({ id }: { id?: string }) => {
           <p className="text-sm text-red-600 h-10">{error}</p>
         </div>
         <input
-          className="px-10 w-40 cursor-pointer py-2 my-5  text-white bg-primary"
+          className="px-10 w-40 h-10 cursor-pointer py-2 my-5  text-white bg-primary"
           type="submit"
-          value="registrar"
+          value={id ? "guardar" : "registrar"}
         />
       </form>
     </section>
