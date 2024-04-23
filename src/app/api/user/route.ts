@@ -5,7 +5,7 @@ export const GET = async () => {
     const data = await db.user.findMany({
       orderBy: [
         {
-          createdAt: "asc",
+          createdAt: "desc",
         },
       ],
     });

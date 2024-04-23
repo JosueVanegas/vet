@@ -4,7 +4,6 @@ import { RiDeleteBin7Line } from "react-icons/ri";
 import { RiEditBoxLine } from "react-icons/ri";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import User from "@/types/User";
 const EmployeeTable = () => {
   const [data, setData] = useState([]);
   const [update, setUpdate] = useState(false);
